@@ -6,6 +6,7 @@
 
 class ICompany
 {
+protected:
     enum COMPANY_TYPE
     {
         TYPE1,
@@ -42,7 +43,7 @@ public:
 
     virtual double getTax() = 0;
 
-private:
+protected:
 
     QString name_;
     QVector<QString> owners_;
