@@ -16,6 +16,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         companiesregister.cpp \
+        companytype1.cpp \
+        companytype2.cpp \
+        companytype3.cpp \
         icompany.cpp \
         main.cpp
 
@@ -26,4 +29,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     companiesregister.h \
+    companytype1.h \
+    companytype2.h \
+    companytype3.h \
     icompany.h
