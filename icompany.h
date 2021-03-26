@@ -6,7 +6,7 @@
 
 class ICompany
 {
-protected:
+public:
     enum COMPANY_TYPE
     {
         TYPE1,
@@ -15,7 +15,7 @@ protected:
     };
 
 public:
-    ICompany();
+    ICompany() = default;
 
     ICompany(QString name, QVector<QString> &owners, double income, double area, int employeesNumber);
 
@@ -42,6 +42,8 @@ public:
     virtual COMPANY_TYPE getCompanyType() = 0;
 
     virtual double getTax() = 0;
+
+    virtual ~ICompany() = default;
 
 protected:
 

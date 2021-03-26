@@ -10,20 +10,22 @@ class CompaniesRegister
 public:
     static CompaniesRegister& instance();
 
-    void addCompany(ICompany company);
+    void addCompany(ICompany* company);
 
-    void removeCompany(ICompany company);
+    void removeCompany(ICompany* company);
 
-    ICompany& getICompany(int i);
+    ICompany* getICompany(int i);
 
     int getSize();
 
+    ~CompaniesRegister();
+
 private:
-    CompaniesRegister();
+    CompaniesRegister() = default;
     CompaniesRegister(const CompaniesRegister &companiesRegister) = delete;
     CompaniesRegister& operator = (const CompaniesRegister &companiesRegister) = delete;
 
-    QVector<ICompany> companies_;
+    QVector<ICompany*> companies_;
 };
 
 #endif // COMPANIESREGISTER_H

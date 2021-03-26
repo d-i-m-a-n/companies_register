@@ -1,10 +1,5 @@
 #include "icompany.h"
 
-ICompany::ICompany()
-{
-
-}
-
 ICompany::ICompany(QString name, QVector<QString> &owners, double income, double area, int employeesNumber)
 {
     if (!name.isEmpty())
