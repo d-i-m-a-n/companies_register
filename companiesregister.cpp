@@ -8,7 +8,8 @@ CompaniesRegister& CompaniesRegister::instance()
 
 void CompaniesRegister::addCompany(ICompany* company)
 {
-    companies_.push_back(company);
+    if(!companies_.contains(company))
+        companies_.push_back(company);
 }
 
 void CompaniesRegister::removeCompany(ICompany* company)
@@ -28,10 +29,6 @@ int CompaniesRegister::getSize()
 
 CompaniesRegister::~CompaniesRegister()
 {
-    while(!companies_.isEmpty())
-    {
-        if(companies_.front())
-            delete companies_.front();
-        companies_.pop_front();
-    }
+    qDeleteAll(companies_);
+    companies_.clear();
 }

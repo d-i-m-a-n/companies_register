@@ -65,10 +65,10 @@ void printAverageValuesForAllTypes()
     ICompany* company_ptr = nullptr;
     int size = companiesRegister.getSize();
     int countCompanies[3] = {0, 0, 0};
-    int countIncome[3] = {0, 0, 0};
-    int countArea[3] = {0, 0, 0};
-    int countTax[3] = {0, 0, 0};
-    int countEmployees[3] = {0, 0, 0};
+    double countIncome[3] = {0, 0, 0};
+    double countArea[3] = {0, 0, 0};
+    double countTax[3] = {0, 0, 0};
+    double countEmployees[3] = {0, 0, 0};
 
     for(int i = 0; i < size; i++)
     {
